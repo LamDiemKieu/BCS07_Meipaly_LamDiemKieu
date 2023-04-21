@@ -76,6 +76,7 @@ nav ul li a:hover {
   background-position: center;
 }
 .banner__content {
+  padding-top: 150px;
   height: 100%;
   display: flex;
   justify-content: center;

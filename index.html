@@ -26,6 +26,7 @@
 
     <!-- fancy box cnd  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css" />
 
     <!-- file css -->
     <link rel="stylesheet" href="./css/style.css">
@@ -145,7 +146,7 @@
                     <div class="posts__item__overlay">
                         <!-- icon -->
                         <div class="overlay__icon">
-                            <a href="./img/grid-metro-1.jpg" data-fancybox data-caption="Caption #1
+                            <a href="./img/grid-metro-1.jpg" data-fancybox="group" data-caption="Caption #1
                             ">
                                 <i class="fa-solid fa-magnifying-glass-plus"></i>
                             </a>
@@ -164,7 +165,7 @@
                     <div class="posts__item__overlay">
                         <!-- icon -->
                         <div class="overlay__icon">
-                            <a href="./img/grid-metro-2.jpg" data-fancybox data-caption="Caption #2
+                            <a href="./img/grid-metro-2.jpg" data-fancybox="group" data-caption="Caption #2
                             ">
                                 <i class="fa-solid fa-magnifying-glass-plus"></i>
                             </a>
@@ -183,7 +184,7 @@
                     <div class="posts__item__overlay">
                         <!-- icon -->
                         <div class="overlay__icon">
-                            <a href="./img/grid-metro-3.jpg" data-fancybox data-caption="Caption #3">
+                            <a href="./img/grid-metro-3.jpg" data-fancybox="group" data-caption="Caption #3">
                                 <i class="fa-solid fa-magnifying-glass-plus"></i>
                             </a>
                         </div>
@@ -201,7 +202,7 @@
                     <div class="posts__item__overlay">
                         <!-- icon -->
                         <div class="overlay__icon">
-                            <a href="./img/grid-metro-4.jpg" data-fancybox data-caption="Caption #4">
+                            <a href="./img/grid-metro-4.jpg" data-fancybox="group" data-caption="Caption #4">
                                 <i class="fa-solid fa-magnifying-glass-plus"></i>
                             </a>
                         </div>
@@ -219,7 +220,7 @@
                     <div class="posts__item__overlay">
                         <!-- icon -->
                         <div class="overlay__icon">
-                            <a href="./img/grid-metro-5.jpg" data-fancybox data-caption="Caption #5">
+                            <a href="./img/grid-metro-5.jpg" data-fancybox="group" data-caption="Caption #5">
                                 <i class="fa-solid fa-magnifying-glass-plus"></i>
                             </a>
                         </div>
@@ -237,7 +238,7 @@
                     <div class="posts__item__overlay">
                         <!-- icon -->
                         <div class="overlay__icon">
-                            <a href="./img/grid-metro-6.jpg" data-fancybox data-caption="Caption #6">
+                            <a href="./img/grid-metro-6.jpg" data-fancybox="group" data-caption="Caption #6">
                                 <i class="fa-solid fa-magnifying-glass-plus"></i>
                             </a>
                         </div>
@@ -255,7 +256,7 @@
                     <div class="posts__item__overlay">
                         <!-- icon -->
                         <div class="overlay__icon">
-                            <a href="./img/grid-metro-7.jpg" data-fancybox data-caption="Caption #7">
+                            <a href="./img/grid-metro-7.jpg" data-fancybox="group" data-caption="Caption #7">
                                 <i class="fa-solid fa-magnifying-glass-plus"></i>
                             </a>
                         </div>
@@ -273,7 +274,7 @@
                     <div class="posts__item__overlay">
                         <!-- icon -->
                         <div class="overlay__icon">
-                            <a href="./img/grid-metro-10.jpg" data-fancybox data-caption="Caption #10">
+                            <a href="./img/grid-metro-10.jpg" data-fancybox="group" data-caption="Caption #10">
                                 <i class="fa-solid fa-magnifying-glass-plus"></i>
                             </a>
                         </div>
@@ -291,7 +292,7 @@
                     <div class="posts__item__overlay">
                         <!-- icon -->
                         <div class="overlay__icon">
-                            <a href="./img/grid-metro-8.jpg" data-fancybox data-caption="Caption #8">
+                            <a href="./img/grid-metro-8.jpg" data-fancybox="group" data-caption="Caption #8">
                                 <i class="fa-solid fa-magnifying-glass-plus"></i>
                             </a>
                         </div>
@@ -309,7 +310,7 @@
                     <div class="posts__item__overlay">
                         <!-- icon -->
                         <div class="overlay__icon">
-                            <a href="./img/grid-metro-9.jpg" data-fancybox data-caption="Caption #9">
+                            <a href="./img/grid-metro-9.jpg" data-fancybox="group" data-caption="Caption #9">
                                 <i class="fa-solid fa-magnifying-glass-plus"></i>
                             </a>
                         </div>
@@ -449,14 +450,6 @@
     <!-- dots: gọi ra các chấm để di chuyển các slide  -->
     <!-- arrows: giúp ẩn 2 dấu mũi tên  -->
 
-    <!-- fancy box -->
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-
-    <script>
-        Fancybox.bind("[data-fancybox]", {
-            // Your custom options
-        });
-    </script>
 
     <!-- cout up js  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"
@@ -469,6 +462,27 @@
             'time': 2000
         });
     </script>
+
+    <!-- fancy box -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <script>
+        Fancybox.bind("[data-fancybox]", {
+        });
+    </script>
+    <script>
+        $('[data-fancybox]').fancybox({
+  buttons : [
+    'close'
+  ],
+  wheel : false,
+  transitionEffect: "slide",
+  loop            : true,
+  toolbar         : false,
+  clickContent    : false
+});
+    </script>
+
 </body>
 
 </html>
